@@ -11,25 +11,32 @@ module.exports = (sequelize, Sequelize) => {
       allowNull: false
     },
     lieu: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
+      allowNull: false
     },
     date_observation: {
-      type: Sequelize.DATE
+      type: Sequelize.DATE,
+      allowNull: false
     },
     type_pollution: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
+      allowNull: false
     },
     description: {
-      type: Sequelize.TEXT
+      type: Sequelize.TEXT,
+      allowNull: false
     },
-    latitude: {    
-      type: Sequelize.DECIMAL(9,6)
+    latitude: {
+      type: Sequelize.DECIMAL(9,6),
+      allowNull: false
     },
     longitude: {
-      type: Sequelize.DECIMAL(9,6)
+      type: Sequelize.DECIMAL(9,6),
+      allowNull: false
     },
     photo_url: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING,
+      allowNull: true
     }
   });
 
