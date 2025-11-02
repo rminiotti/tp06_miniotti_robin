@@ -89,13 +89,21 @@ exports.update = async (req, res) => {
         return res.status(400).send({ message: "Content can not be empty!" });
     }
 
-    const validationError = validatePollution(req.body);
+    let pollution = await Pollution.findByPk(id);
+    if (!pollution) {
+        return res.status(404).send({ message: 'Not found' });
+    }
+
+    // add the updated fields to the existing
+    pollution = { ...pollution.dataValues, ...req.body };
+
+    const validationError = validatePollution(pollution);
     if (validationError) {
         return res.status(400).send(validationError);
     }
 
     try {
-        const [numUpdated] = await Pollution.update(req.body, { where: { id: id } });
+        const [numUpdated] = await Pollution.update(pollution, { where: { id: id } });
         if (numUpdated === 0) {
             return res.status(404).send({ message: 'Not found' });
         }
