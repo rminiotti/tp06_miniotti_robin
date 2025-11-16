@@ -8,5 +8,10 @@ export const routes: Routes = [
 	{
 		path: 'pollutions',
 		loadChildren: () => import('./pollutions/pollutions.module').then(m => m.PollutionsModule)
-	},	
+	},
+	{
+		path: '',
+		redirectTo: 'pollutions',
+		pathMatch: 'full'
+	}	
 ];

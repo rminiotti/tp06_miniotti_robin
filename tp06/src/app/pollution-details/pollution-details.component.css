@@ -182,5 +182,32 @@
   
   .details-header h2 {
     font-size: 1.3rem;
-  }
+  }  
+}
+
+/* Retour button styles */
+.back-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 20px;
+}
+
+.back-btn:hover {
+  background: linear-gradient(90deg, #0056b3 0%, #007bff 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.back-btn:active {
+  background: #003d80;
+  transform: scale(0.98);
 }
