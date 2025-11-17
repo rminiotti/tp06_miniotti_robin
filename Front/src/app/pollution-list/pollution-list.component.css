@@ -12,6 +12,14 @@
   margin-bottom: 20px;
 }
 
+.create-pollution-section {
+  margin-bottom: 15px;
+}
+
+.favorites-filter-section {
+  margin-bottom: 20px;
+}
+
 .filter-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -115,6 +123,25 @@
 
 .favorites-filter-btn.active:hover {
   background-color: #ff5252;
+}
+
+.favorites-badge {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 8px;
+  min-width: 24px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.favorites-filter-btn.active .favorites-badge {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 /* Responsive design */

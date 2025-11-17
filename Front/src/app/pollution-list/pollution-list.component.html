@@ -40,22 +40,24 @@
             </button>
             <button type="button" (click)="clearFilters()" class="clear-btn">
               Effacer
-            </button>
-            <button 
+            </button>            
+          </div>
+        </form>        
+      </div>
+
+
+      <div class="create-pollution-section">        
+        <button (click)="startCreating()" class="details-btn">Ajouter une pollution</button>        
+      </div>
+      <div class="favorites-filter-section">
+        <button
               type="button" 
               (click)="toggleFavoritesFilter()" 
               [class]="showOnlyFavorites ? 'favorites-filter-btn active' : 'favorites-filter-btn'"
               [title]="showOnlyFavorites ? 'Afficher toutes les pollutions' : 'Afficher uniquement les favoris'">
               {{ showOnlyFavorites ? '★ Favoris' : '☆ Favoris' }}
+              <span class="favorites-badge">{{ (favorisService.getFavorisCount() | async) || 0 }}</span>
             </button>
-          </div>
-        </form>
-      </div>
-
-
-
-      <div class="create-pollution-section">        
-        <button (click)="startCreating()" class="details-btn">Ajouter une pollution</button>
       </div>
 
       <ul>
