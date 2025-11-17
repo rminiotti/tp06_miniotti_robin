@@ -41,6 +41,13 @@
             <button type="button" (click)="clearFilters()" class="clear-btn">
               Effacer
             </button>
+            <button 
+              type="button" 
+              (click)="toggleFavoritesFilter()" 
+              [class]="showOnlyFavorites ? 'favorites-filter-btn active' : 'favorites-filter-btn'"
+              [title]="showOnlyFavorites ? 'Afficher toutes les pollutions' : 'Afficher uniquement les favoris'">
+              {{ showOnlyFavorites ? '★ Favoris' : '☆ Favoris' }}
+            </button>
           </div>
         </form>
       </div>
@@ -64,6 +71,12 @@
               <button [routerLink]="['/pollutions/details', pollution.id]" class="details-btn">Voir détails</button>
               <button (click)="deletePollution(pollution.id)" class="delete-btn">Supprimer</button>
               <button (click)="editPollution(pollution.id)" class="edit-btn">Modifier</button>
+              <button 
+                (click)="toggleFavorite(pollution)" 
+                [class]="isFavorite(pollution.id) ? 'favorite-btn favorite-active' : 'favorite-btn'"
+                [title]="isFavorite(pollution.id) ? 'Retirer des favoris' : 'Ajouter aux favoris'">
+                {{ isFavorite(pollution.id) ? '★' : '☆' }}
+              </button>
             </div>
           </li>
         }
