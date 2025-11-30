@@ -67,6 +67,36 @@ header.top-menu nav a.active {
   box-shadow: 0 4px 12px rgba(31, 41, 51, 0.12);
 }
 
+/* Favorites count badge */
+.favorites-count {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background: #ff4081;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(255, 64, 129, 0.25);
+  transition: transform 150ms, box-shadow 150ms;
+}
+
+.favorites-count:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 64, 129, 0.35);
+}
+
+.fav-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.fav-number {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
 /* Main content area */
 main {
   flex: 1 1 auto;

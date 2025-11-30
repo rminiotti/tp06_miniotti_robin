@@ -5,6 +5,10 @@
 			<nav>
 				<a routerLink="/pollutions" routerLinkActive="active">Pollutions</a>
 				<a routerLink="/login" routerLinkActive="active">Login</a>
+				<div class="favorites-count">
+					<span class="fav-icon">♥</span>
+					<span class="fav-number">{{ favorisCount$ | async }}</span>
+				</div>
 			</nav>
 		</div>
 	</header>
