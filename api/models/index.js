@@ -5,8 +5,10 @@ const sequelize = new Sequelize(`postgres://${BDD.user}:${BDD.password}@${BDD.ho
     dialect: 'postgres',
     protocol: 'postgres',
     dialectOptions: {
-      ssl: true,
-      native:true
+      ssl: {
+        require: true,
+        rejectUnauthorized: false
+      }
     },
     define:  {
     	timestamps:false
