@@ -1,3 +1,4 @@
+# Build timestamp: 2026-01-16 - Force rebuild
 FROM node:22
 
 WORKDIR /app

@@ -6,3 +6,6 @@ services:
     plan: free
     region: frankfurt
     dockerfilePath: ./Dockerfile
+    envVars:
+      - key: NODE_ENV
+        value: production
